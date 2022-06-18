@@ -1,17 +1,8 @@
-import * as monaco from 'monaco-editor';
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.api.js';
 
-import { SchemasSettings, setDiagnosticsOptions } from '..';
+import { setDiagnosticsOptions } from '../index.js';
 
-self.MonacoEnvironment = {
-  getWorkerUrl(workerId, label) {
-    if (label === 'yaml') {
-      return 'dist/yaml.worker.js';
-    }
-    return 'dist/editor.worker.js';
-  },
-};
-
-const schema: SchemasSettings = {
+const schema = {
   fileMatch: ['*'],
   uri: 'http://schemas/my-schema.json',
   schema: {

@@ -18,7 +18,8 @@
     "yaml.worker.js.map"
   ],
   "workspaces": [
-    "examples/*"
+    "examples/*",
+    "test-experiments"
   ],
   "author": "Kevin Decker <kpdecker@gmail.com> (http://incaseofstairs.com)",
   "maintainers": [

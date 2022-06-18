@@ -10,8 +10,11 @@ for (const entryPoint of entryPoints) {
   esbuild.build({
     entryPoints: [entryPoint],
     bundle: true,
+    minify: false,
     format: 'iife',
-    outdir: 'test/out',
+    sourcemap: 'linked',
+    outdir: 'test/dist',
+    legalComments: 'none',
     loader: {
       '.ttf': 'file',
     },

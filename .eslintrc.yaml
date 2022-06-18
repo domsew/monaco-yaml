@@ -4,6 +4,7 @@ extends:
 rules:
   '@typescript-eslint/no-shadow': off
   '@typescript-eslint/no-unnecessary-condition': off
+  '@typescript-eslint/consistent-type-imports': off
 
   import/extensions: off
   import/no-extraneous-dependencies: off
@@ -14,3 +15,6 @@ rules:
   node/no-extraneous-import: off
   node/no-unsupported-features/es-syntax: off
   node/no-unsupported-features/node-builtins: off
+ignorePatterns:
+  - cypress
+  - test-experiments
